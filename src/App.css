@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .app {
     display: flex;
     align-items: center;
@@ -5,7 +8,7 @@
     height: 100vh; /* 100% height */
     background: linear-gradient(
             rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.3)
+            rgba(255, 255, 255, 0.11)
         ),
         url("./img/bg.jpg");
     background-size: cover;
