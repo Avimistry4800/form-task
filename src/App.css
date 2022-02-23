@@ -1,10 +1,36 @@
-body{
-    background-color: rgb(49, 33, 33);
-    color: white;
-}
-.app{
-    display:flex;
+.app {
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;  /* 100% height */
+    height: 100vh; /* 100% height */
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3)
+        ),
+        url("./img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+form{
+    background-color: white;
+    padding: 0px 60px;
+    border-radius: 10px;
+}
+
+h1{
+    color: blueviolet;
+    text-align: center;
+}
+button{
+    width: 100%;
+    color:white;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: blueviolet;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
