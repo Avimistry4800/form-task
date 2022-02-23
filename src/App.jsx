@@ -21,7 +21,9 @@ const App = () => {
             type: "text",
             placeholder: "Username",
             errorMessage: "Username should be 3-16 characters and shouldn't include any special character!",
+            pattern: "^[a-zA-Z0-9]{3,16}$",
             label: "Username",
+            required: true,
         },
         {
             id: 2,
@@ -30,6 +32,7 @@ const App = () => {
             placeholder: "Email",
             errorMessage: "Email is invalid",
             label: "Email",
+            required: true,
         },
         {
             id: 3,
@@ -38,6 +41,7 @@ const App = () => {
             placeholder: "Full Name",
             errorMessage: "Full name is required",
             label: "Full Name",
+            required: true,
         },
         {
             id: 4,
@@ -46,6 +50,7 @@ const App = () => {
             placeholder: "Date of birth",
             errorMessage: "Date of birth is required",
             label: "Date of Birth",
+            required: true,
         },
         {
             id: 5,
@@ -54,6 +59,7 @@ const App = () => {
             placeholder: "City",
             errorMessage: "City is required",
             label: "City",
+            required: true,
         },
         {
             id: 6,
@@ -61,7 +67,9 @@ const App = () => {
             type: "text",
             placeholder: "Phone Number",
             errorMessage: "Phone number is invalid",
+            pattern:`^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$`,
             label: "Phone Number",
+            required: true,
         },
         {
             id: 7,
@@ -69,7 +77,9 @@ const App = () => {
             type: "password",
             placeholder: "Password",
             errorMessage: "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+            pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
             label: "Password",
+            required: true,
         },
         {
             id: 8,
@@ -77,7 +87,9 @@ const App = () => {
             type: "password",
             placeholder: "Confirm Password",
             errorMessage: "Passwords do not match",
+            pattern: values.password,
             label: "Confirm Password",
+            required: true,
         },
     ];
 
@@ -98,6 +110,7 @@ console.log(values);
                         {...input}
                         value={values[input.name]}
                         onChange={onChange}
+
                     />
                 ))}
                 <button type="submit">Submit</button>
